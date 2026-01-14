@@ -2,17 +2,17 @@ export const SPEED = [
     {
         id: 1,
         label: "Slow",
-        speedValue: 600
+        speedValue: 300
     },
     {
         id: 2,
         label: "Medium",
-        speedValue: 350
+        speedValue: 175
     },
     {
         id: 3,
         label: "Fast",
-        speedValue: 180 
+        speedValue: 90 
     }
 ] as const;
 
