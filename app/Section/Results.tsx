@@ -13,6 +13,13 @@ const Results = ({
     timeMs,
     status
 }: SimulationResult) => {
+    const formattedTimeMs = Number.isFinite(timeMs)
+        ? new Intl.NumberFormat("en-US", {
+            minimumFractionDigits: 4,
+            maximumFractionDigits: 4
+        }).format(timeMs)
+        : "0";
+
     return (
         <div className="flex flex-row gap-8 items-center justify-center w-full">
             <ResultCard
@@ -24,7 +31,7 @@ const Results = ({
                 description="PATH LENGTH"
             />
             <ResultCard
-                result={timeMs}
+                result={formattedTimeMs}
                 description="TIME"
                 unit
             />
